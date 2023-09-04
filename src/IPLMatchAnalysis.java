@@ -14,7 +14,7 @@ public class IPLMatchAnalysis {
             br.readLine(); // Skip the header line
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
-                String season = data[1].trim(); // Assuming season is in the second column (index 1)
+                String season = data[1].trim();
 
                 // Check if the season is already in the map
                 if (matchesPerYear.containsKey(season)) {

@@ -15,9 +15,9 @@ public class IPLMatchAnalysis1 {
             br.readLine(); // Skip the header line
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
-                String winner = data[10].trim(); // Winner column (index 10)
+                String winner = data[10].trim();
 
-                // Check if the winner is not an empty string (some matches may not have a winner)
+
                 if (!winner.isEmpty()) {
                     // Check if the team is already in the map
                     if (matchesWonByTeam.containsKey(winner)) {

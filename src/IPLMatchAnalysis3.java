@@ -19,10 +19,10 @@ public class IPLMatchAnalysis3 {
 
             while ((line = br.readLine()) != null) {
                 String[] match = line.split(",");
-                int year = Integer.parseInt(match[1]); // Assuming year is in the second column
+                int year = Integer.parseInt(match[1]);
 
                 if (year == 2015) {
-                    idListmatch.add(Integer.parseInt(match[0])); // Assuming match ID is in the first column
+                    idListmatch.add(Integer.parseInt(match[0]));
                 }
             }
         } catch (IOException e) {
@@ -36,11 +36,11 @@ public class IPLMatchAnalysis3 {
 
             while ((line = br.readLine()) != null) {
                 String[] deliveries = line.split(",");
-                int matchId = Integer.parseInt(deliveries[0]); // Assuming match ID is in the first column
+                int matchId = Integer.parseInt(deliveries[0]);
 
                 if (idListmatch.contains(matchId)) {
-                    String bowlerName = deliveries[8]; // Assuming bowler's name is in the 9th column
-                    int runs = Integer.parseInt(deliveries[17]); // Assuming runs given is in the 18th column
+                    String bowlerName = deliveries[8];
+                    int runs = Integer.parseInt(deliveries[17]);
                     totalRunsGiven.put(bowlerName, totalRunsGiven.getOrDefault(bowlerName, 0) + runs);
                     totalBallsBowled.put(bowlerName, totalBallsBowled.getOrDefault(bowlerName, 0) + 1);
                 }
