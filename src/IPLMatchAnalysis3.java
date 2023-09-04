@@ -56,8 +56,7 @@ public class IPLMatchAnalysis3 {
                 bowlerAverages.add(new BowlerAverage(bowler, economy));
             }
 
-            // Sort the bowler averages
-            bowlerAverages.sort(Comparator.comparingDouble(BowlerAverage::getEconomy));
+
 
             // Print the top 10 economical bowlers
             System.out.println("Top 10 Economical Bowlers in 2015:");
